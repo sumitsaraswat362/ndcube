@@ -89,7 +89,7 @@ class GlobalCoords(GlobalCoordsABC):
         self._internal_coords = OrderedDict()
 
     def __deepcopy__(self, memo):
-        import copy
+
         cls = self.__class__
         result = cls.__new__(cls)
         memo[id(self)] = result

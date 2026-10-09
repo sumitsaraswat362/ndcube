@@ -1,4 +1,5 @@
 import abc
+import copy
 from collections.abc import Iterable
 from functools import partial, reduce
 from numbers import Integral
@@ -156,7 +157,7 @@ class ExtraCoords(ExtraCoordsABC):
         self._ndcube = ndcube
 
     def __deepcopy__(self, memo):
-        import copy
+
         cls = self.__class__
         result = cls.__new__(cls)
         memo[id(self)] = result
